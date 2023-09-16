@@ -1,1 +1,2 @@
 venv/*
+comment_finder/comment_finder/__pycache__/*

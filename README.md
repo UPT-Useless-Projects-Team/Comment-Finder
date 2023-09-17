@@ -7,7 +7,7 @@ pip install venv
 python -m venv venv
 ```
 
-Depending on your terminal run appropriate activate file
+Depending on your terminal, run appropriate activate file
 
 ```
 venv/Scripts/activate.bat

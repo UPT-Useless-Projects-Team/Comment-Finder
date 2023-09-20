@@ -1,5 +1,3 @@
-# Comment-Finder
-
 # Run
 
 1. Install and run venv

@@ -1,0 +1,39 @@
+.cardBox{
+    position: relative;
+    .revCardBox{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #cfcfcf;
+        color: rgb(172, 172, 226);
+        font-weight: bold;
+        font-size: 150%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        cursor: default;
+        .showCard{
+            width: 100%;
+            text-align: center;
+            height: 5vh;
+            line-height: 5vh;
+            background: #7f7fca;
+            ul{
+                list-style: none;
+            }
+        }
+    }
+    
+    .Card{
+        width: 35vw;
+        height: 60vh;
+        background: #d3d3d3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .isSticked{
+        display: none;
+    }
+}

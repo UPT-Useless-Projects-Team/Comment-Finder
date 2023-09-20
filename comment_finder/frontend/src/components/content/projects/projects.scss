@@ -1,0 +1,63 @@
+.projectsContainer{
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+    .projectsAddon{
+        top: 5vh;
+        left: 10vw;
+        width: 10%;
+        height: 5.1vh;
+        color: white;
+        background: rgba(255,255,255,0.2);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: 10px 0px 0px 0px rgb(172, 172, 226), 
+        20px 0px 0px 0px #7f7fca;
+    }
+    .projectsBox{
+        width: 80vw;
+        height: 80vh;
+        background: rgba(255,255,255,0.2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: .5rem 1rem 1rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 6;
+        .paperBg{
+            position: absolute;
+            width: 96%;
+            height: 94%;
+            z-index: 7;
+            background: #c7c7c7;
+            transform: rotateZ(-5deg) translateX(-15px) translateY(10px);
+        }
+        .projectsContent{
+            width: 96%;
+            height: 94%;
+            z-index: 9;
+            background: #e4e4e4;  
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .Panel{
+                width: 98%;
+                height: 96%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

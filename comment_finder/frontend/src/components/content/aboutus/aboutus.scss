@@ -1,0 +1,286 @@
+@keyframes UPTLinkAnimationKeyFrames {
+    10%{
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.1);
+    }
+    60% {
+        transform: scale(1);
+    }
+}
+.aboutusContainer{
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+    .aboutusAddon{
+        top: 5vh;
+        left: 10vw;
+        width: 10%;
+        height: 5.1vh;
+        color: white;
+        background: rgba(255,255,255,0.2);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: 10px 0px 0px 0px rgb(172, 172, 226), 
+        20px 0px 0px 0px #7f7fca;
+    }
+    .aboutusBox{
+        width: 80vw;
+        height: 80vh;
+        background: rgba(255,255,255,0.2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: .5rem 1rem 1rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 6;
+        .paperBg, .paperBg1{
+            position: absolute;
+            width: 96%;
+            height: 94%;
+            z-index: 7;
+            background: #a8a8a8;
+            transform: rotateZ(1.3deg);
+        }
+        .paperBg1{
+            transform: rotateZ(-1deg);
+            z-index: 9;
+            background: #bebebe;
+        }
+        .stickyNotes, .stickyNotes1{
+            position: absolute;
+            width: 18%;
+            height: 30%;
+            z-index: 10;
+            top: 2%;
+            left: 1%;
+            background: rgb(172, 172, 226);
+            transform: rotateZ(-3deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 3s;
+            cursor: pointer;
+            .stickyContent, .stickyContent1{
+                color: #000;
+                font-weight: bold;
+                font-size: 250%;
+                font-family: BabyDoll;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .stickyContent1{
+                padding: 10%;
+                text-align: left;
+                font-size: 170%;
+            }
+        }
+        .stickyNotes.hideSticky{
+            top: -500%;
+        }
+        .stickyNotes1.hideSticky{
+            left: -500%;
+        }
+        .stickyNotes1{
+            z-index: 11;
+            top: 21%;
+            left: 0.5%;
+            background: rgb(127, 127, 202);
+            transform: rotateZ(-10deg);
+        }
+        .aboutContent{
+            width: 96%;
+            height: 94%;
+            z-index: 9;
+            background: #e4e4e4;  
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .Panel{
+                width: 33%;
+                height: 98%;
+            }
+            .noteLine{
+                width: 80%;
+                margin-top: 2%;
+                border-bottom: 1px solid black;
+            }
+            .left{
+                transform: rotateZ(-1.5deg) translateY(10px) translateX(-16px);
+                position: relative;
+                background: #ced476;
+                .noteImg{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                .noteText{
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    font-family: BabyDoll;
+                    font-size: 250%;
+                    top: 70%;
+                    left: 50%;
+                    transform: translate(-50%,-30%);
+                    .signs{
+                        display: flex;
+                        margin-top: 10%;
+                        justify-content: space-around;
+                        align-items: flex-end;
+                        .sign, .sign1{
+                            transform: rotateZ(-6deg);
+                        }
+                    }
+                }
+                .dotts{
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .dottedPanel{
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        background: #e4e4e4;
+                        box-shadow: inset 0px 0px 5px 1px rgb(197, 197, 197);
+                    }
+                } 
+            }
+            .middle{
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: center;
+                //background: rgba(36, 36, 36, 0.2);
+                .noteMiddle{
+                    width: 80%;
+                    min-height: 50%;
+                    padding-top: 2%;
+                    font-size: 120%;
+                }
+                .noteTech{
+                    width: 80%;
+                    margin-top: 10%;
+                }
+                .containerCheckBox {
+                    display: block;
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 12px;
+                    cursor: pointer;
+                    font-size: 22px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+                .containerCheckBox input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    background-color: #eee;
+                }
+                .containerCheckBox:hover input ~ .checkmark {
+                    background-color: #ccc;
+                }
+                .containerCheckBox input:checked ~ .checkmark {
+                    background-color: #7f7fca;
+                }
+                .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+                .containerCheckBox input:checked ~ .checkmark:after {
+                    display: block;
+                }
+                .containerCheckBox .checkmark:after {
+                    left: 9px;
+                    top: 5px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+            .right{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                .coffeStain{
+                    position: absolute;
+                    width: 120%;
+                    right: 0;
+                    bottom: 6%;
+                    opacity: 0.5;
+                    transform: rotateZ(98deg);
+                }
+                .noteRight{
+                    width: 80%;
+                    min-height: 50%;
+                    .statusNoteRight{
+                        margin-top: 10%;
+                        .progressInfo{
+                            margin-top: 2%;
+                            font-size: 150%;
+                            font-weight: bold;
+                        }
+                        .projectDesc{
+                            margin-top: 10%;
+                            .gitLink{
+                                margin-top: 10%;
+                            }
+                            .projectDescName{
+                                font-size: 150%;
+                                font-weight: bold;
+                            }
+                            .projectDescContent{
+                                margin-top: 1%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.UPTLinkAnimation{
+    cursor: pointer;
+    display: inline-block;
+}
+.UPTLinkAnimationPaused{
+    animation: UPTLinkAnimationKeyFrames;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}

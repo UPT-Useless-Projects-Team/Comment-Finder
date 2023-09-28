@@ -1,3 +1,4 @@
 venv/*
 comment_finder/frontend/node_modules/*
 comment_finder/public_python/__pycache__/*
+comment_finder/public_python/.env
